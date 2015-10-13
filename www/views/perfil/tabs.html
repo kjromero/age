@@ -1,19 +1,30 @@
+<ion-nav-bar class="header agroinsumos bar-stable">
+      <header>
+        <div class="branding">
+          <img src="img/icon_insumos.png" height="42" width="126">
+        </div>
+        
+        <ion-nav-buttons side="right">
+          <div class="profile" menu-toggle="right">
+              <span class="profile__text">Perfil</span>
+              <!-- <span class="profile__img">
+              <span class="icon-profile"></span>
+              </span> -->
+              <i class="ion-arrow-right-c"></i>
+          </div>
+        </ion-nav-buttons>
+      </header>
+    </ion-nav-bar>
+
 <ion-tabs class="tabs-icon-top tabs-color-active-positive">
 
-  <!-- Dashboard Tab -->
-  <ion-tab title="Status" icon-off="ion-ios-pulse" icon-on="ion-ios-pulse-strong" href="#/tab/dash">
-    <ion-nav-view name="tab-dash"></ion-nav-view>
-  </ion-tab>
+    <!-- opciones -->
+    <ion-tab title="Status" icon-off="ion-ios-pulse" icon-on="ion-ios-pulse-strong" href="#/tab/opciones">
+      <ion-nav-view name="tab-opciones"></ion-nav-view>
+    </ion-tab>
 
-  <!-- Chats Tab -->
-  <ion-tab title="Chats" icon-off="ion-ios-chatboxes-outline" icon-on="ion-ios-chatboxes" href="#/tab/chats">
-    <ion-nav-view name="tab-chats"></ion-nav-view>
-  </ion-tab>
-
-  <!-- Account Tab -->
-  <ion-tab title="Account" icon-off="ion-ios-gear-outline" icon-on="ion-ios-gear" href="#/tab/account">
-    <ion-nav-view name="tab-account"></ion-nav-view>
-  </ion-tab>
-
-
+    <!-- sugerencias -->
+    <ion-tab title="Chats" icon-off="ion-ios-chatboxes-outline" icon-on="ion-ios-chatboxes" href="#/tab/sugerencias">
+        <ion-nav-view name="tab-sugerencias"></ion-nav-view>
+    </ion-tab>
 </ion-tabs>

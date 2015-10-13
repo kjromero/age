@@ -68,43 +68,52 @@ angular.module('starter', ['ionic', 'starter.controllers'])
       }
     }
   })
+
   .state('splash',{
     url:'/splash',
     templateUrl: 'views/splash/splash.html'
   })
+
   .state('login',{
     url:'/login',
     templateUrl: 'views/login/login.html'
   })
+
   .state('home',{
     url:'/home',
     templateUrl: 'views/home/home.html'
   })
+
   .state('perfil',{
     url:'/perfil',
     templateUrl: 'views/perfil/perfil.html'
   })
+
   .state('tab', {
     url: '/tab',
-    views: {
-      'tabsContent': {
-        templateUrl: 'views/perfil/tabs.html'
-      }
-    }
+    abstract: true,
+    templateUrl: 'views/perfil/tabs.html'
   })
-  .state('tab.opciones', {
+
+  // Each tab has its own nav history stack:
+
+  .state('tab.dash', {
     url: '/opciones',
     views: {
       'tab-opciones': {
-        templateUrl: 'templates/opciones.html'
+        templateUrl: 'views/perfil/opciones.html'
       }
     }
   })
-  .state('sugerencias', {
-    url: '/sugerencias',
-    templateUrl: 'views/perfil/sugerencias.html'
-  });
 
+  .state('tab.account', {
+    url: '/sugerencias',
+    views: {
+      'tab-sugerencias': {
+        templateUrl: 'views/perfil/sugerencias.html'
+      }
+    }
+  });
 
   // if none of the above states are matched, use this as the fallback
   $urlRouterProvider.otherwise('/splash');
